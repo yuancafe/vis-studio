@@ -4,7 +4,7 @@
 
 ## English
 
-Brand Identity Design Skills is a reusable bundle for full brand identity engagements. It turns the VIS v3 workflow into a structured package that covers the full path from discovery to governance, including the application-production phase that studio work usually treats as a separate layer.
+Brand Identity Design Skills is a reusable bundle for full brand identity engagements. It turns the current VIS workflow into a structured package that covers the full path from discovery to governance, including the application-production phase that studio work usually treats as a separate layer.
 
 ### What this package is for
 
@@ -16,7 +16,7 @@ Brand Identity Design Skills is a reusable bundle for full brand identity engage
 
 ### What is included
 
-Public v3 skills:
+Public skills in this bundle:
 
 - `brand-discovery-strategy`
 - `visual-concept-exploration`
@@ -33,6 +33,27 @@ Supporting internal skills:
 - `application-mockup-composer`
 - `brand-application-factory`
 
+Package references:
+
+- `references/V3_ARCHITECTURE.md`
+- `references/PROCESS_SYNTHESIS.md`
+
+Support assets and scripts:
+
+- `support/brand-style-playbook-selector/assets/brand_style_playbooks.json`
+- `support/brand-style-playbook-selector/assets/sample_brand_brief.json`
+- `support/brand-style-playbook-selector/scripts/select_playbooks.py`
+- `support/application-scope-planner/assets/sample_application_request.json`
+- `support/application-scope-planner/assets/starter_bundles.json`
+- `support/application-scope-planner/scripts/build_scope_matrix.py`
+- `support/application-route-classifier/scripts/classify_routes.py`
+- `support/application-template-factory/references/template-output-contract.md`
+- `support/application-mockup-composer/references/mockup-output-contract.md`
+- `support/brand-application-factory/assets/sample_brand_foundation.json`
+- `support/brand-application-factory/assets/wrapper_skill_template.md`
+- `support/brand-application-factory/scripts/build_brand_pack.py`
+- `support/brand-application-factory/scripts/generate_wrapper_skill.py`
+
 ### How the flow works
 
 1. `brand-discovery-strategy` gathers context, audits existing assets, and frames the scope.
@@ -45,11 +66,11 @@ Supporting internal skills:
 
 Application work is not just "more design." It is a different production layer with its own scope logic, route logic, and output logic. This package keeps that layer explicit so teams can handle 5 items, 20 items, or 100+ items without flattening everything into one vague deliverable.
 
-### Local install
+### Package notes
 
-This bundle is intended to live in:
-
-`/Users/yuan/.agents/skills/brand-identity-design-skills`
+- The package is designed to be installable into a local skills directory, but the public repository keeps paths generic.
+- The repository includes the reusable skills, the support layer, and the package-level documentation.
+- Version history is tracked in `CHANGELOG.md`; this repo release corresponds to the current bundled release line.
 
 ### Notes
 
@@ -60,7 +81,7 @@ This bundle is intended to live in:
 
 ## 中文
 
-Brand Identity Design Skills 是一个可复用的品牌视觉识别技能包。它把 VIS v3 的流程整理成一个结构化套件，覆盖从诊断、概念探索、基础系统生产，到应用生产和治理交付的完整链路，并把 studio 里常常单独处理的 application 阶段明确拆出来。
+Brand Identity Design Skills 是一个可复用的品牌视觉识别技能包。它把当前 VIS 流程整理成一个结构化套件，覆盖从诊断、概念探索、基础系统生产，到应用生产和治理交付的完整链路，并把 studio 里常常单独处理的 application 阶段明确拆出来。
 
 ### 这个技能包是做什么的
 
@@ -72,13 +93,34 @@ Brand Identity Design Skills 是一个可复用的品牌视觉识别技能包。
 
 ### 包含什么
 
-公开 v3 技能：
+公开技能：
 
 - `brand-discovery-strategy`
 - `visual-concept-exploration`
 - `identity-system-production`
 - `brand-application-system`
 - `brand-governance-rollout`
+
+包内参考文档：
+
+- `references/V3_ARCHITECTURE.md`
+- `references/PROCESS_SYNTHESIS.md`
+
+支持性资产和脚本：
+
+- `support/brand-style-playbook-selector/assets/brand_style_playbooks.json`
+- `support/brand-style-playbook-selector/assets/sample_brand_brief.json`
+- `support/brand-style-playbook-selector/scripts/select_playbooks.py`
+- `support/application-scope-planner/assets/sample_application_request.json`
+- `support/application-scope-planner/assets/starter_bundles.json`
+- `support/application-scope-planner/scripts/build_scope_matrix.py`
+- `support/application-route-classifier/scripts/classify_routes.py`
+- `support/application-template-factory/references/template-output-contract.md`
+- `support/application-mockup-composer/references/mockup-output-contract.md`
+- `support/brand-application-factory/assets/sample_brand_foundation.json`
+- `support/brand-application-factory/assets/wrapper_skill_template.md`
+- `support/brand-application-factory/scripts/build_brand_pack.py`
+- `support/brand-application-factory/scripts/generate_wrapper_skill.py`
 
 支持性内部技能：
 
@@ -101,11 +143,11 @@ Brand Identity Design Skills 是一个可复用的品牌视觉识别技能包。
 
 Application 不是“多做一点设计”，而是另一层生产系统，拥有独立的范围逻辑、路由逻辑和输出逻辑。把这一层单独拆开后，才能稳定处理 5 项、20 项，甚至 100+ 项的应用需求，而不会把所有内容压成一个模糊交付。
 
-### 本地安装位置
+### 包说明
 
-该 bundle 设计为安装到：
-
-`/Users/yuan/.agents/skills/brand-identity-design-skills`
+- 公开仓库不会写入本地绝对路径。
+- 本地安装由技能管理流程完成，仓库只保留可复用的内容和说明。
+- 版本历史记录在 `CHANGELOG.md`，当前对应的是 bundle 的最新发布线。
 
 ### 说明
 

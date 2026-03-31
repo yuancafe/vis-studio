@@ -4,7 +4,7 @@
 
 ## English
 
-### 1.2 - VIS v3, current package
+### 1.2 - Current release
 
 - Split application production into a dedicated `brand-application-system`.
 - Added the 5 public v3 skills:
@@ -23,14 +23,14 @@
 - Added the machine-readable `brand-pack` and brand-specific wrapper skill model.
 - Added 30 structured style playbooks to make direction selection and downstream solutioning more consistent.
 
-### 1.1 - VIS v2 structure
+### 1.1 - Intermediate consolidation
 
 - Consolidated the suite into a cleaner 4-skill public flow.
 - Kept discovery, concept exploration, identity production, and governance as the main phases.
 - Improved the handoff logic between strategy and system design.
 - Introduced stronger separation between core identity thinking and later packaging.
 
-### 1.0 - VIS v1 prototype
+### 1.0 - Initial prototype
 
 - Started with the original prototype skill family.
 - Focused on brand strategy foundation, asset audit, guideline building, and visual identity system thinking.
@@ -38,7 +38,7 @@
 
 ## 中文
 
-### 1.2 - VIS v3，当前版本
+### 1.2 - 当前发布版
 
 - 把 application production 单独拆成 `brand-application-system`。
 - 新增 5 个公开 v3 技能：
@@ -57,14 +57,14 @@
 - 引入 machine-readable 的 `brand-pack` 与品牌专属 wrapper skill 模型。
 - 增加 30 套结构化 style playbooks，让方向收敛和后续 solution 更稳定。
 
-### 1.1 - VIS v2 结构
+### 1.1 - 中期收敛版本
 
 - 把技能套件收敛成更清晰的 4 步公开流程。
 - 保留 discovery、concept exploration、identity production、governance 作为主阶段。
 - 加强 strategy 和 system design 之间的交接逻辑。
 - 开始明确核心身份与后续包装之间的边界。
 
-### 1.0 - VIS v1 原型
+### 1.0 - 初始原型版本
 
 - 从最初的原型技能家族开始。
 - 重点是品牌策略基础、资产盘点、规范构建和视觉识别系统思维。
