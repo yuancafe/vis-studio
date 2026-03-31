@@ -1,0 +1,18 @@
+{
+  "brand": {
+    "name": "Northstar Studio",
+    "slug": "northstar-studio"
+  },
+  "bundle_ids": ["starter-6"],
+  "items": [
+    {
+      "name": "Notebook cover",
+      "priority": "medium",
+      "variant_count": 2
+    },
+    {
+      "name": "Packaging dieline overview",
+      "priority": "low"
+    }
+  ]
+}

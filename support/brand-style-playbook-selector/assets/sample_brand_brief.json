@@ -1,0 +1,9 @@
+{
+  "brand_name": "Northstar Studio",
+  "category": "design systems consultancy",
+  "audience": ["B2B founders", "product teams"],
+  "price_point": "premium",
+  "personality": ["clear", "confident", "intelligent"],
+  "required_signals": ["clarity", "trust", "precision", "professional", "grid"],
+  "avoid_signals": ["cute", "chaotic", "nostalgic", "cheap"]
+}

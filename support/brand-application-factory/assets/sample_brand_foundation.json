@@ -1,0 +1,43 @@
+{
+  "brand": {
+    "name": "Northstar Studio",
+    "slug": "northstar-studio",
+    "category": "design systems consultancy"
+  },
+  "brand_guideline": {
+    "summary": "Precision-led consulting identity built for clarity, trust, and modern authority."
+  },
+  "brand_tokens": {
+    "color": {
+      "primary": "#111111",
+      "support": "#4B5563",
+      "accent": "#2563EB",
+      "paper": "#F9FAFB"
+    },
+    "type": {
+      "display": "Suisse Intl",
+      "body": "Suisse Intl",
+      "support": "IBM Plex Mono"
+    },
+    "graphic": {
+      "grid": "12-column rational grid",
+      "corner_radius": "0"
+    }
+  },
+  "logo_system": {
+    "primary": "Northstar Studio wordmark",
+    "secondary": "NS monogram lockup",
+    "icon": "NS monogram",
+    "clear_space": "0.5x cap height",
+    "minimum_size": "24px digital"
+  },
+  "style_playbook_selection": {
+    "lead_playbook": "swiss-precision-minimal",
+    "top_3": [
+      "swiss-precision-minimal",
+      "b2b-authority-grid",
+      "quiet-editorial-intelligence"
+    ]
+  },
+  "source_of_truth": "shared-drive://northstar-brand"
+}
