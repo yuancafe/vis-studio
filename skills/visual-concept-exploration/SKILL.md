@@ -28,7 +28,24 @@ Define:
 - category codes to keep, reject, or reinterpret
 - required brand tension
 
-### 2. Develop territories
+### 2. Distill reference styles before exploring
+
+If reference brands or benchmark sites exist, do not jump straight into collage moodboards.
+
+Build `REFERENCE_STYLE_DISTILLATION.md` from 8-15 references and extract:
+
+- repeated atmosphere signals
+- typography behavior
+- color behavior
+- logo posture
+- layout and composition cues
+- imagery and material language
+- application cues worth adapting
+- codes to keep, adapt, reject, or avoid
+
+Use this document to synthesize, not to average. The goal is to produce a usable design brief for our own identity, not a blended imitation of reference brands.
+
+### 3. Develop territories
 
 Create 2-4 distinct visual territories.
 
@@ -43,7 +60,7 @@ Each territory should include:
 
 Use `brand-style-playbook-selector` to narrow against the structured playbook library and produce a justified top-3.
 
-### 3. Explore logo directions structurally
+### 4. Explore logo directions structurally
 
 Start in black and white.
 
@@ -56,15 +73,15 @@ Explore:
 
 Judge structure, not color seduction.
 
-### 4. Curate, do not dump
+### 5. Curate, do not dump
 
 Reduce exploration to a strong shortlist for review.
 
-### 5. Present for the 50% gate
+### 6. Present for the 50% gate
 
 Explain each direction in business terms, not only taste terms.
 
-### 6. Lock the selected playbook posture
+### 7. Lock the selected playbook posture
 
 Carry forward:
 
@@ -76,6 +93,7 @@ Carry forward:
 
 ## Outputs
 
+- `REFERENCE_STYLE_DISTILLATION.md`
 - visual territories
 - curated moodboards or stylescapes
 - structural logo directions
@@ -98,3 +116,5 @@ After concept approval, continue with `identity-system-production`.
 - `references/territory-workflow.md`
 - `references/review-criteria.md`
 - `references/playbook-selection-workflow.md`
+- `references/reference-style-distillation.md`
+- `assets/reference_style_distillation_template.md`

@@ -7,7 +7,7 @@ description: Builds the reusable automation layer for a finished identity system
 
 ## Overview
 
-Turn the finished design system into a reusable automation surface. This skill publishes the machine-readable `brand-pack` and generates the lightweight wrapper skill that future sessions can call directly.
+Turn the finished design system into a reusable automation surface. This skill publishes the machine-readable `brand-pack`, preserves the AI-readable design documents, and generates the lightweight wrapper skill that future sessions can call directly.
 
 ## Use This Skill
 
@@ -32,6 +32,14 @@ Check that all required sections exist:
 - `application-recipes`
 - `asset-manifest`
 
+Check for recommended design-doc payloads:
+
+- `reference_style_distillation`
+- `design_md_documents.brand_foundation_design`
+- `design_md_documents.ui_ux_design` when digital scope exists
+- `design_md_documents.application_design`
+- `design_md_documents.design_index`
+
 ### 3. Generate the wrapper skill
 
 Run `scripts/generate_wrapper_skill.py` with the published pack and output directory.
@@ -44,6 +52,7 @@ Use the generated wrapper skill in future sessions to:
 - restate brand constraints
 - generate automation-friendly applications
 - produce manual briefs for vector-heavy work
+- reuse the design-md files as AI-readable design instructions for Stitch, Figma MCP, Pencil, and similar tooling
 
 ## Resources
 

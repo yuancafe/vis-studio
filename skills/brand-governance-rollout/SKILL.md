@@ -33,7 +33,24 @@ Document:
 
 Treat this as the final Brand Identity Guideline, not a generic style sheet.
 
-### 2. Package the asset system
+### 2. Finalize the AI-readable design document pack
+
+Package the brand into a stable markdown design system set for downstream design agents:
+
+- `REFERENCE_STYLE_DISTILLATION.md`
+- `BRAND_FOUNDATION_DESIGN.md`
+- `UI_UX_DESIGN.md` when relevant
+- `APPLICATION_DESIGN.md`
+- `DESIGN_INDEX.md`
+
+`DESIGN_INDEX.md` should explain:
+
+- which file to use for which task
+- which sections are authoritative
+- which files are foundation vs extension
+- how Stitch, Figma MCP, Pencil, or similar tools should consume the pack
+
+### 3. Package the asset system
 
 Define:
 
@@ -42,7 +59,7 @@ Define:
 - naming logic
 - access location
 
-### 3. Finalize the brand pack and wrapper handoff
+### 4. Finalize the brand pack and wrapper handoff
 
 Publish the finalized machine-readable pack:
 
@@ -52,10 +69,11 @@ Publish the finalized machine-readable pack:
 - `style-playbook-selection`
 - `application-recipes`
 - `asset-manifest`
+- `design_md_documents`
 
 Use `brand-application-factory` to prepare the wrapper-skill handoff for future application generation.
 
-### 4. Prepare rollout materials
+### 5. Prepare rollout materials
 
 Create or specify:
 
@@ -64,7 +82,7 @@ Create or specify:
 - launch or transition checklist
 - phase-two backlog
 
-### 5. Establish governance
+### 6. Establish governance
 
 Define:
 
@@ -76,6 +94,7 @@ Define:
 ## Outputs
 
 - Brand Identity Guideline
+- design-md document pack
 - finalized brand pack
 - wrapper-skill handoff
 - asset and export structure
@@ -95,3 +114,5 @@ Define:
 - `references/guideline-workflow.md`
 - `references/governance-checklist.md`
 - `references/brand-pack-publication.md`
+- `references/design-md-handoff.md`
+- `assets/design_index_template.md`

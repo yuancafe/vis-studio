@@ -76,7 +76,34 @@ For each family, create recipes that describe:
 - route choice
 - export expectations
 
-### 6. Enrich the brand pack
+### 6. Build AI-readable application design documents
+
+Create one or two design-facing markdown documents, depending on scope:
+
+- `UI_UX_DESIGN.md` when the project includes website, product, dashboard, landing page, or other digital interface work
+- `APPLICATION_DESIGN.md` for non-UI touchpoints such as social templates, decks, print, packaging, signage, and collateral systems
+
+These files should extend the foundation document rather than repeat it. They should define the actual design language that downstream design tools and MCP-based agents must follow.
+
+`UI_UX_DESIGN.md` should capture:
+
+- page atmosphere and product surface behavior
+- navigation patterns
+- section and module patterns
+- cards, forms, tables, CTAs, states, and responsive logic
+- motion cues and interaction tone
+- prompt-ready component instructions
+
+`APPLICATION_DESIGN.md` should capture:
+
+- touchpoint families
+- layout logic by family
+- print and export constraints
+- template logic
+- route-aware instructions for template, mockup, or manual work
+- prompt-ready application instructions
+
+### 7. Enrich the brand pack
 
 Add:
 
@@ -84,6 +111,8 @@ Add:
 - scope matrix
 - bundle presets
 - route metadata
+- `design_md_documents.ui_ux_design`
+- `design_md_documents.application_design`
 
 ## Outputs
 
@@ -91,6 +120,8 @@ Add:
 - prioritized application bundles
 - route-aware production plan
 - reusable application recipes
+- `UI_UX_DESIGN.md` when digital scope exists
+- `APPLICATION_DESIGN.md`
 - enriched brand pack
 
 ## Non-Negotiables
@@ -109,3 +140,6 @@ After approval, continue with `brand-governance-rollout`.
 - `references/application-system-workflow.md`
 - `references/scope-bands.md`
 - `references/production-routes.md`
+- `references/design-md-outputs.md`
+- `assets/ui_ux_design_template.md`
+- `assets/application_design_template.md`

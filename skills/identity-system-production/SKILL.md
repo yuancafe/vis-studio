@@ -71,11 +71,31 @@ Preview on:
 
 Keep these as proof points and foundational application rules, not full production batches.
 
-### 6. Stop for the 75% gate
+### 6. Draft the AI-readable foundation design file
+
+Create `BRAND_FOUNDATION_DESIGN.md` as an AI-facing design system document inspired by Stitch-style `DESIGN.md` structure, but expanded for full VIS work.
+
+It should capture:
+
+- visual theme and atmosphere
+- brand intent and perception
+- color palette and semantic roles
+- typography rules and hierarchy
+- logo system behavior
+- graphic system and shapes
+- imagery and art direction
+- layout principles
+- motion or interaction cues when relevant
+- dos and don'ts
+- agent prompt guide for downstream tooling
+
+This file should be specific enough that tools such as Stitch, Figma MCP, or similar design agents can generate work that stays on-system.
+
+### 7. Stop for the 75% gate
 
 Secure approval on the high-fidelity system before governance packaging.
 
-### 7. Draft the brand-pack foundation
+### 8. Draft the brand-pack foundation
 
 Create the machine-readable base for downstream automation:
 
@@ -83,6 +103,7 @@ Create the machine-readable base for downstream automation:
 - `brand-tokens`
 - `logo-system`
 - `style-playbook-selection`
+- `design_md_documents.brand_foundation_design`
 
 ## Outputs
 
@@ -91,6 +112,7 @@ Create the machine-readable base for downstream automation:
 - typography hierarchy
 - imagery and graphic rules
 - foundational application proofs
+- `BRAND_FOUNDATION_DESIGN.md`
 - draft brand-pack foundation
 
 ## Non-Negotiables
@@ -111,3 +133,5 @@ After approval, continue with `brand-application-system`.
 - `references/production-workflow.md`
 - `references/production-gates.md`
 - `references/foundational-application-proof.md`
+- `references/foundation-design-md.md`
+- `assets/brand_foundation_design_template.md`
