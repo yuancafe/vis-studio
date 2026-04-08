@@ -92,6 +92,11 @@ def main() -> None:
         "brand_tokens": foundation.get("brand_tokens", {}),
         "logo_system": foundation.get("logo_system", {}),
         "style_playbook_selection": foundation.get("style_playbook_selection", {}),
+        "reference_style_distillation": foundation.get("reference_style_distillation"),
+        "design_md_documents": {
+            **foundation.get("design_md_documents", {}),
+            **applications.get("design_md_documents", {}),
+        },
         "application_recipes": applications.get("application_recipes")
         or build_application_recipes(applications.get("items", [])),
         "asset_manifest": asset_manifest,

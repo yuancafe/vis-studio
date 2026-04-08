@@ -39,5 +39,12 @@
       "quiet-editorial-intelligence"
     ]
   },
+  "reference_style_distillation": "# REFERENCE_STYLE_DISTILLATION.md\n\n## Repeating Signals\n\n- Rational grid discipline\n- Restrained monochrome base with one sharp accent\n- Precise editorial typography\n",
+  "design_md_documents": {
+    "brand_foundation_design": "# BRAND_FOUNDATION_DESIGN.md\n\n## Visual Theme and Atmosphere\n\n- precise\n- editorial\n- high-trust\n",
+    "ui_ux_design": "# UI_UX_DESIGN.md\n\n## Product Surface and Atmosphere\n\n- clean product surfaces\n- assertive CTA hierarchy\n",
+    "application_design": "# APPLICATION_DESIGN.md\n\n## Application Families\n\n- social media\n- presentation\n- print collateral\n",
+    "design_index": "# DESIGN_INDEX.md\n\n## Read Order\n\n1. REFERENCE_STYLE_DISTILLATION.md\n2. BRAND_FOUNDATION_DESIGN.md\n3. UI_UX_DESIGN.md\n4. APPLICATION_DESIGN.md\n"
+  },
   "source_of_truth": "shared-drive://northstar-brand"
 }

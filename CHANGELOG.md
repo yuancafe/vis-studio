@@ -24,6 +24,7 @@
 - Added 30 structured style playbooks to make direction selection and downstream solutioning more consistent.
 - Added a VIS-oriented design markdown layer so the suite can produce `REFERENCE_STYLE_DISTILLATION.md`, `BRAND_FOUNDATION_DESIGN.md`, `UI_UX_DESIGN.md`, `APPLICATION_DESIGN.md`, and `DESIGN_INDEX.md` for downstream design tools.
 - Added an explicit reference-style distillation workflow so multiple benchmark brands can be synthesized into original identity direction instead of copied literally.
+- Expanded wrapper generation so the suite can produce both `<brand-slug>-brand-applications` and `<brand-slug>-brand-guidelines`.
 
 ### 1.1 - Intermediate consolidation
 
@@ -60,6 +61,7 @@
 - 增加 30 套结构化 style playbooks，让方向收敛和后续 solution 更稳定。
 - 新增面向 VIS 的 design markdown 输出层，可产出 `REFERENCE_STYLE_DISTILLATION.md`、`BRAND_FOUNDATION_DESIGN.md`、`UI_UX_DESIGN.md`、`APPLICATION_DESIGN.md`、`DESIGN_INDEX.md`，供下游设计工具读取。
 - 新增参考风格提炼方法，把多个参考品牌收敛成原创方向，而不是直接拼接模仿。
+- 扩展 wrapper 生成链路，可同时产出 `<brand-slug>-brand-applications` 和 `<brand-slug>-brand-guidelines`。
 
 ### 1.1 - 中期收敛版本
 
