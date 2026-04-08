@@ -20,7 +20,9 @@ Use the bundled brand pack at `{pack_rel_path}` and the bundled design markdown 
 
 1. `references/design-index.md`
 2. `assets/brand_pack.json`
-3. the specific design markdown file matched to the task
+3. `references/tool-adapter-index.md`
+4. the specific design markdown file matched to the task
+5. the specific tool adapter matched to the task
 
 ## Task routing
 
@@ -48,6 +50,13 @@ When asked why the system looks the way it does, read:
 
 - `references/reference-style-distillation.md`
 
+### 5. Tool-specific execution
+
+For a specific tool or model, read:
+
+- `references/tool-adapter-index.md`
+- the matching file under `references/tool-adapters/`
+
 ## Operating rules
 
 - Prefer the bundled files over memory or improvised taste
@@ -55,3 +64,4 @@ When asked why the system looks the way it does, read:
 - Keep the work inside the approved identity system
 - Flag any request that changes the logo, color architecture, or core visual posture
 - When a request is underspecified, derive from the most specific matching design markdown file
+- When a tool is specified, adapt the output to that tool's strengths and boundaries instead of forcing a one-size-fits-all prompt

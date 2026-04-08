@@ -9,6 +9,8 @@ Finalize the brand as a markdown design system pack that AI tools can consume re
 - `UI_UX_DESIGN.md` when relevant
 - `APPLICATION_DESIGN.md`
 - `DESIGN_INDEX.md`
+- `TOOL_ADAPTER_INDEX.md`
+- tool-specific adapter contracts
 
 ## What `DESIGN_INDEX.md` Should Do
 
@@ -27,6 +29,8 @@ Use:
 
 - `BRAND_FOUNDATION_DESIGN.md`
 - `UI_UX_DESIGN.md` when interface work exists
+- `TOOL_ADAPTER_INDEX.md`
+- `tool-adapters/stitch.md`
 
 ### Figma MCP
 
@@ -35,6 +39,8 @@ Use:
 - `BRAND_FOUNDATION_DESIGN.md`
 - `UI_UX_DESIGN.md`
 - `APPLICATION_DESIGN.md`
+- `TOOL_ADAPTER_INDEX.md`
+- `tool-adapters/figma-mcp.md`
 
 ### Pencil or similar design agents
 
@@ -42,6 +48,48 @@ Use:
 
 - `BRAND_FOUNDATION_DESIGN.md`
 - `APPLICATION_DESIGN.md`
+- `TOOL_ADAPTER_INDEX.md`
+- `tool-adapters/pencil.md`
+
+### Adobe Illustrator
+
+Use:
+
+- `BRAND_FOUNDATION_DESIGN.md`
+- `APPLICATION_DESIGN.md`
+- `tool-adapters/adobe-illustrator.md`
+
+### Adobe Photoshop
+
+Use:
+
+- `BRAND_FOUNDATION_DESIGN.md`
+- `APPLICATION_DESIGN.md`
+- `tool-adapters/adobe-photoshop.md`
+
+### Canva
+
+Use:
+
+- `BRAND_FOUNDATION_DESIGN.md`
+- `APPLICATION_DESIGN.md`
+- `tool-adapters/canva.md`
+
+### Inkscape
+
+Use:
+
+- `BRAND_FOUNDATION_DESIGN.md`
+- `APPLICATION_DESIGN.md`
+- `tool-adapters/inkscape.md`
+
+### Text-to-image models
+
+Use:
+
+- `BRAND_FOUNDATION_DESIGN.md`
+- `APPLICATION_DESIGN.md`
+- `tool-adapters/image-generation-models.md`
 
 ## Governance Rule
 
