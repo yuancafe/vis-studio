@@ -7,11 +7,19 @@ This package's design-markdown approach is informed by two upstream references:
 - Google Stitch `DESIGN.md` documentation
   - https://stitch.withgoogle.com/docs/design-md/overview/
 
+And one local methodology source:
+
+- local skill `visual-identity-direction`
+  - `/Users/yuan/.agents/skills/visual-identity-direction/SKILL.md`
+
 ## What We Borrowed
 
 - the idea that markdown design files should be written for AI consumption, not just human review
 - explicit sections instead of vague stylistic prose
 - prompt-friendly instructions that downstream tools can execute with less drift
+- strategy-to-visual translation patterns
+- moodboard explanation discipline
+- photography, typography, and color direction frameworks
 
 ## What We Changed for VIS
 

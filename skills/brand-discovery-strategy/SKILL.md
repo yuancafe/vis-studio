@@ -70,7 +70,16 @@ Define:
 - values
 - personality
 - verbal direction
+- single-minded proposition
 - preliminary application priorities
+
+Translate strategy into visual-direction inputs before the next phase:
+
+- 3-5 brand personality adjectives
+- 2-3 word brand essence
+- desired emotional response
+- category codes to keep, reinterpret, or reject
+- early photography and imagery posture
 
 ### 5. Produce the approved strategy brief
 
@@ -80,6 +89,12 @@ Create:
 - route recommendation
 - approved problem statement
 - design criteria for the next phase
+- creative-brief core:
+  - audience
+  - SMP
+  - tone
+  - differentiation
+  - visual guardrails
 - initial scope posture:
   - strategy only
   - core identity
@@ -99,6 +114,7 @@ Load `references/milestone-gates.md`.
 - audience and competition synthesis
 - preserve / refine / replace decisions
 - approved design criteria
+- strategy-to-visual translation inputs
 - initial application-scope assumptions
 
 ## Non-Negotiables
@@ -118,3 +134,4 @@ After approval, continue with `visual-concept-exploration`.
 - `references/integrated-discovery-audit.md`
 - `references/milestone-gates.md`
 - `references/scope-intake.md`
+- `references/visual-identity-direction-frameworks.md`

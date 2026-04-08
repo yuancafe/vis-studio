@@ -56,6 +56,7 @@ Define:
 Define:
 
 - imagery
+- photography direction
 - iconography
 - patterns or shapes
 - layout behavior
@@ -84,6 +85,7 @@ It should capture:
 - logo system behavior
 - graphic system and shapes
 - imagery and art direction
+- photography direction and lighting rules
 - layout principles
 - motion or interaction cues when relevant
 - dos and don'ts
@@ -111,6 +113,7 @@ Create the machine-readable base for downstream automation:
 - color specs
 - typography hierarchy
 - imagery and graphic rules
+- photography direction
 - foundational application proofs
 - `BRAND_FOUNDATION_DESIGN.md`
 - draft brand-pack foundation
@@ -134,4 +137,5 @@ After approval, continue with `brand-application-system`.
 - `references/production-gates.md`
 - `references/foundational-application-proof.md`
 - `references/foundation-design-md.md`
+- `references/visual-identity-direction-frameworks.md`
 - `assets/brand_foundation_design_template.md`

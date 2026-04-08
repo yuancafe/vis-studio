@@ -21,12 +21,26 @@ Begin only after an approved strategy brief exists from `brand-discovery-strateg
 
 ### 1. Convert strategy into visual criteria
 
+Use the strategy-to-visual translation method instead of jumping from adjectives to random moodboards.
+
 Define:
 
 - desired perception
 - emotional temperature
 - category codes to keep, reject, or reinterpret
 - required brand tension
+- 3-5 brand personality adjectives
+- 2-3 word brand essence
+- single-minded proposition
+
+Translate each core adjective into visual consequences:
+
+- typography behavior
+- color posture
+- composition logic
+- imagery and lighting direction
+- material and texture cues
+- likely logo posture
 
 ### 2. Distill reference styles before exploring
 
@@ -56,7 +70,9 @@ Each territory should include:
 - likely typography behavior
 - likely color logic
 - imagery posture
+- photography style
 - compositional character
+- signature elements
 
 Use `brand-style-playbook-selector` to narrow against the structured playbook library and produce a justified top-3.
 
@@ -77,6 +93,13 @@ Judge structure, not color seduction.
 
 Reduce exploration to a strong shortlist for review.
 
+Build moodboards or stylescapes with explicit rationale:
+
+- why each reference is present
+- which part of the strategy it supports
+- what should be carried forward
+- what should not be copied literally
+
 ### 6. Present for the 50% gate
 
 Explain each direction in business terms, not only taste terms.
@@ -96,6 +119,7 @@ Carry forward:
 - `REFERENCE_STYLE_DISTILLATION.md`
 - visual territories
 - curated moodboards or stylescapes
+- photography / imagery direction
 - structural logo directions
 - shortlist with recommendation
 - top-3 playbook narrowing with one recommended lead direction
@@ -117,4 +141,5 @@ After concept approval, continue with `identity-system-production`.
 - `references/review-criteria.md`
 - `references/playbook-selection-workflow.md`
 - `references/reference-style-distillation.md`
+- `references/visual-identity-direction-frameworks.md`
 - `assets/reference_style_distillation_template.md`

@@ -26,6 +26,8 @@
 - Added an explicit reference-style distillation workflow so multiple benchmark brands can be synthesized into original identity direction instead of copied literally.
 - Expanded wrapper generation so the suite can produce both `<brand-slug>-brand-applications` and `<brand-slug>-brand-guidelines`.
 - Added tool-adapter contracts for Figma MCP, Stitch, Pencil, Adobe Illustrator, Adobe Photoshop, Canva, Inkscape, and image-generation model workflows.
+- Added standard prompt skeletons for each supported tool so teams can invoke design tools and image models with a consistent structure.
+- Integrated reusable methodology from the local `visual-identity-direction` skill into discovery, concept exploration, and foundation design guidance.
 
 ### 1.1 - Intermediate consolidation
 
@@ -64,6 +66,8 @@
 - 新增参考风格提炼方法，把多个参考品牌收敛成原创方向，而不是直接拼接模仿。
 - 扩展 wrapper 生成链路，可同时产出 `<brand-slug>-brand-applications` 和 `<brand-slug>-brand-guidelines`。
 - 新增工具适配层，覆盖 Figma MCP、Stitch、Pencil、Adobe Illustrator、Adobe Photoshop、Canva、Inkscape 和文生图模型工作流。
+- 新增每种工具的标准 prompt skeleton，方便后续稳定调用设计工具和生成模型。
+- 把本地 `visual-identity-direction` skill 中可复用的方法论并入 discovery、concept 和 foundation 阶段。
 
 ### 1.1 - 中期收敛版本
 
