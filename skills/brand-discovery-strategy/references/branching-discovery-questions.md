@@ -2,6 +2,26 @@
 
 Ask 1-3 questions at a time. Move from diagnosis to narrowing.
 
+## Intake gate
+
+Before using the full question tree, quickly check whether you already have enough input for:
+
+- business context
+- target audience
+- closest competitors or substitute brands
+- current assets or reference materials
+- phase-one deliverables
+
+If the answer is no, ask the smallest missing set first.
+
+Typical highest-leverage opening questions:
+
+- Who are the closest competitors or reference brands we should benchmark against?
+- What existing assets, guidelines, decks, packaging, pages, or social materials already exist?
+- What exactly must be delivered in phase one?
+
+If those are already provided, skip them and continue deeper into strategy.
+
 ## Stage 1. Route diagnosis
 
 - Are we building from zero or evolving an existing identity?
@@ -78,3 +98,7 @@ This sets the design ambition and risk level.
 
 Reason:
 This prevents over-scoping and defines realistic output boundaries.
+
+## Behavior note
+
+If a user already supplied a detailed brief, competitor set, reference deck, and current assets, the skill should ask fewer questions. That is correct behavior. The goal is not to force a questionnaire; the goal is to close missing decision-critical gaps before strategy synthesis.

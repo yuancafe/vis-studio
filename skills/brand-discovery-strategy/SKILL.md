@@ -32,7 +32,21 @@ First determine:
 - fragmented legacy identity
 - refresh / rebrand
 
-### 2. Run integrated discovery
+### 2. Run the intake gate before deep work
+
+Before full discovery synthesis, check whether the project already includes enough input across:
+
+- business context
+- audience
+- competitors or substitutes
+- current assets or references
+- intended deliverables and rollout scope
+
+If two or more of these are missing or still vague, pause and ask 1-3 targeted questions before continuing.
+
+Do not front-load a giant questionnaire. Ask only the highest-leverage questions needed to unblock the next step.
+
+### 3. Run integrated discovery
 
 Ask in sequence, not all at once:
 
@@ -47,7 +61,7 @@ Ask in sequence, not all at once:
 
 Load `references/branching-discovery-questions.md`.
 
-### 3. Audit current assets when they exist
+### 4. Audit current assets when they exist
 
 Assess:
 
@@ -59,7 +73,7 @@ Assess:
 
 Load `references/integrated-discovery-audit.md`.
 
-### 4. Form strategy from the evidence
+### 5. Form strategy from the evidence
 
 Define:
 
@@ -81,7 +95,7 @@ Translate strategy into visual-direction inputs before the next phase:
 - category codes to keep, reinterpret, or reject
 - early photography and imagery posture
 
-### 5. Produce the approved strategy brief
+### 6. Produce the approved strategy brief
 
 Create:
 
@@ -100,7 +114,7 @@ Create:
   - core identity
   - identity plus applications
 
-### 6. Stop for approval
+### 7. Stop for approval
 
 Do not move into concept exploration until the strategy brief is aligned.
 
@@ -120,9 +134,17 @@ Load `references/milestone-gates.md`.
 ## Non-Negotiables
 
 - Never jump into moodboards before diagnosis
+- Never skip intake validation when core project inputs are missing
 - Never separate audit findings from strategy synthesis
 - Never treat founder taste as a substitute for positioning
 - Never leave existing brand equity unexamined
+
+## Intake behavior
+
+- If the user already provided rich material, proceed with fewer questions.
+- If the user gave only partial material, ask the smallest set of questions needed to restore clarity.
+- Prioritize asking about competitors, references, existing assets, and phase-one deliverables early because they strongly affect downstream identity work.
+- Make clear which assumptions are inferred and which are user-confirmed.
 
 ## Hand Off
 

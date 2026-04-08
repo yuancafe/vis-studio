@@ -4,7 +4,14 @@
 
 ## English
 
-### 1.2 - Current release
+### 1.3 - Current release
+
+- Rewrote the README so the public repository now reflects the actual bundle scope instead of an earlier packaging snapshot.
+- Added a stricter discovery-intake behavior: the suite should now explicitly check whether business context, audience, competitors, current assets, and intended deliverables are present before moving forward.
+- Added clearer guidance that the opening phase should pause and ask 1-3 targeted questions when critical inputs are missing instead of silently assuming them.
+- Clarified that rich upfront materials may reduce or eliminate intake questions, which is expected behavior rather than a workflow gap.
+
+### 1.2 - VIS system release
 
 - Split application production into a dedicated `brand-application-system`.
 - Added the 5 public v3 skills:
@@ -45,7 +52,14 @@
 
 ## 中文
 
-### 1.2 - 当前发布版
+### 1.3 - 当前发布版
+
+- 重写了 README，让公开仓库首页真正反映当前 bundle 的能力范围，而不再停留在较早期的打包说明状态。
+- 新增更严格的 discovery intake 机制：在继续推进前，先显式检查 business context、audience、competitors、current assets 和 deliverables 是否齐全。
+- 补充更明确的追问规则：当关键信息缺失时，前期阶段应暂停并先追问 1-3 个关键问题，而不是默认直接假设。
+- 明确说明：如果用户一开始提供的资料已经足够完整，那么前期问题会减少甚至不再追问，这是预期行为，不是流程缺失。
+
+### 1.2 - VIS 系统发布版
 
 - 把 application production 单独拆成 `brand-application-system`。
 - 新增 5 个公开 v3 技能：

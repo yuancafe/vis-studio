@@ -31,6 +31,7 @@ This package bundles the VIS v3 workflow into one reusable suite for end-to-end 
 - Use the public skills in sequence to move from strategy to rollout.
 - Use the support skills when a step needs structured selection, scope planning, route classification, template production, or wrapper generation.
 - Treat the package as a reusable brand identity operating system, not a one-off design kit.
+- Start with an intake-and-discovery pass, and ask targeted questions when competitors, existing assets, references, or deliverables are still unclear.
 
 ## References
 
