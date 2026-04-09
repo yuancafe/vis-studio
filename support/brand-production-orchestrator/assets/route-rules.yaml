@@ -1,0 +1,330 @@
+routes:
+  vis_handbook:
+    route: vis_handbook_to_figma_mcp
+    primary_tool: figma_mcp
+    critical: true
+    default_family: handbook
+    executor_candidates:
+      - figma_mcp
+      - figma_connector
+      - stitch
+    input_artifact_types:
+      - brand_pack
+      - logo
+      - vector
+      - layout
+    output_artifact_types:
+      - handbook
+      - layout
+    secondary_tools:
+      - adobe_illustrator
+      - adobe_photoshop
+    keywords:
+      - handbook
+      - guideline
+      - manual
+      - brand book
+      - vis handbook
+      - visual identity booklet
+    required_documents:
+      - brand_pack.json
+      - BRAND_FOUNDATION_DESIGN.md
+      - REFERENCE_STYLE_DISTILLATION.md
+      - DESIGN_INDEX.md
+    optional_documents:
+      - APPLICATION_DESIGN.md
+    actions:
+      - read_source_documents
+      - extract_handbook_rules
+      - create_handbook_structure
+      - create_variables
+      - create_styles
+      - create_page_templates
+      - build_section_skeletons
+    deliverables:
+      - cover_page
+      - table_of_contents
+      - chapter_templates
+      - logo_system_pages
+      - color_system_pages
+      - typography_pages
+      - layout_pages
+      - imagery_pages
+      - application_pages
+    mcp_supported: true
+
+  logo_refinement:
+    route: logo_refinement_to_illustrator
+    primary_tool: adobe_illustrator
+    critical: true
+    default_family: logo
+    executor_candidates:
+      - illustrator
+      - inkscape-mcp
+    input_artifact_types:
+      - brand_pack
+    output_artifact_types:
+      - logo
+      - vector
+    keywords:
+      - logo
+      - wordmark
+      - logomark
+      - refine logo
+      - logo geometry
+      - lockup
+      - icon vector
+      - logo construction
+    required_documents:
+      - brand_pack.json
+      - BRAND_FOUNDATION_DESIGN.md
+      - REFERENCE_STYLE_DISTILLATION.md
+    optional_documents: []
+    actions:
+      - read_source_documents
+      - extract_logo_rules
+      - define_construction_logic
+      - define_lockups
+      - define_safe_area
+      - define_misuse_examples
+    deliverables:
+      - vector_refinement_brief
+      - lockup_spec
+      - construction_sheet
+      - export_guidelines
+    mcp_supported: false
+
+  visual_asset_system:
+    route: visual_asset_system_to_figma
+    primary_tool: figma_mcp
+    critical: false
+    default_family: visual-assets
+    executor_candidates:
+      - figma_mcp
+      - illustrator
+      - canva
+    input_artifact_types:
+      - brand_pack
+      - logo
+      - vector
+    output_artifact_types:
+      - asset_system
+      - vector
+    secondary_tools:
+      - adobe_illustrator
+      - canva
+    keywords:
+      - visual asset system
+      - asset library
+      - graphic language system
+      - brand asset system
+    required_documents:
+      - brand_pack.json
+      - BRAND_FOUNDATION_DESIGN.md
+      - APPLICATION_DESIGN.md
+    optional_documents:
+      - REFERENCE_STYLE_DISTILLATION.md
+    actions:
+      - read_source_documents
+      - extract_asset_rules
+      - define_asset_families
+      - define_reuse_rules
+      - define_export_matrix
+    deliverables:
+      - asset_system_brief
+      - asset_family_spec
+      - export_matrix
+    mcp_supported: true
+
+  packaging_mockup:
+    route: packaging_mockup_to_photoshop
+    primary_tool: adobe_photoshop
+    critical: false
+    default_family: packaging
+    executor_candidates:
+      - photoshop
+      - canva
+    input_artifact_types:
+      - brand_pack
+      - vector
+      - layout
+    output_artifact_types:
+      - mockup
+      - layout
+    keywords:
+      - mockup
+      - packaging scene
+      - product scene
+      - material realism
+      - packaging visual
+    required_documents:
+      - brand_pack.json
+      - BRAND_FOUNDATION_DESIGN.md
+      - APPLICATION_DESIGN.md
+    optional_documents:
+      - REFERENCE_STYLE_DISTILLATION.md
+    actions:
+      - read_source_documents
+      - extract_material_and_scene_rules
+      - define_mockup_structure
+      - define_lighting_and_camera_logic
+      - produce_mockup_prompt
+    deliverables:
+      - mockup_brief
+      - scene_prompt
+      - review_checklist
+    mcp_supported: false
+
+  social_template_pack:
+    route: social_template_pack_to_canva
+    primary_tool: canva
+    critical: false
+    default_family: social
+    executor_candidates:
+      - canva
+      - figma_connector
+    input_artifact_types:
+      - brand_pack
+      - layout
+      - template
+    output_artifact_types:
+      - template
+      - layout
+    keywords:
+      - social templates
+      - post templates
+      - content cards
+      - editable template pack
+      - social pack
+    required_documents:
+      - brand_pack.json
+      - APPLICATION_DESIGN.md
+    optional_documents:
+      - BRAND_FOUNDATION_DESIGN.md
+    actions:
+      - read_source_documents
+      - define_template_families
+      - define_editable_modules
+      - define_text_and_image_slots
+      - produce_canva_prompt
+    deliverables:
+      - template_pack_brief
+      - module_spec
+      - editable_template_prompt
+    mcp_supported: false
+
+  landing_page_visual_system:
+    route: landing_page_visual_system_to_stitch
+    primary_tool: stitch
+    critical: false
+    default_family: web
+    executor_candidates:
+      - stitch
+      - figma_connector
+      - pencil
+    input_artifact_types:
+      - brand_pack
+      - layout
+      - ui
+    output_artifact_types:
+      - web
+      - layout
+      - ui
+    secondary_tools:
+      - figma_mcp
+    keywords:
+      - landing page
+      - marketing website
+      - web visual system
+      - campaign page
+    required_documents:
+      - brand_pack.json
+      - BRAND_FOUNDATION_DESIGN.md
+      - UI_UX_DESIGN.md
+    optional_documents:
+      - APPLICATION_DESIGN.md
+    actions:
+      - read_source_documents
+      - extract_web_visual_rules
+      - define_screen_families
+      - define_layout_and_component_logic
+      - produce_stitch_prompt
+    deliverables:
+      - landing_page_system_brief
+      - screen_family_prompt
+    mcp_supported: true
+
+  ui_screen_system:
+    route: ui_screen_system_to_pencil
+    primary_tool: pencil
+    critical: false
+    default_family: ui
+    executor_candidates:
+      - pencil
+      - stitch
+      - figma_connector
+    input_artifact_types:
+      - brand_pack
+      - ui
+      - layout
+    output_artifact_types:
+      - ui
+      - layout
+    secondary_tools:
+      - figma_mcp
+    keywords:
+      - product ui
+      - app screens
+      - ui system
+      - screen family
+      - product flow
+    required_documents:
+      - brand_pack.json
+      - UI_UX_DESIGN.md
+      - DESIGN_INDEX.md
+    optional_documents:
+      - BRAND_FOUNDATION_DESIGN.md
+    actions:
+      - read_source_documents
+      - extract_ui_rules
+      - define_screen_groups
+      - define_component_logic
+      - produce_pencil_prompt
+    deliverables:
+      - ui_system_brief
+      - screen_generation_prompt
+    mcp_supported: false
+
+  open_source_vector_refinement:
+    route: open_source_vector_refinement_to_inkscape
+    primary_tool: inkscape
+    critical: false
+    default_family: vector
+    executor_candidates:
+      - inkscape-mcp
+      - illustrator
+    input_artifact_types:
+      - brand_pack
+      - vector
+    output_artifact_types:
+      - vector
+    keywords:
+      - open-source vector
+      - open source vector
+      - inkscape
+      - vector refinement
+      - vector cleanup
+    required_documents:
+      - brand_pack.json
+      - BRAND_FOUNDATION_DESIGN.md
+      - REFERENCE_STYLE_DISTILLATION.md
+    optional_documents: []
+    actions:
+      - read_source_documents
+      - extract_vector_rules
+      - define_geometry_cleanup_tasks
+      - produce_inkscape_prompt
+    deliverables:
+      - vector_cleanup_brief
+      - execution_prompt
+    mcp_supported: false

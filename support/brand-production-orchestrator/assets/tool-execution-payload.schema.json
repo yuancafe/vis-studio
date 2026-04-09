@@ -1,0 +1,294 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TOOL_EXECUTION_PAYLOAD",
+  "type": "object",
+  "required": [
+    "goal",
+    "intent",
+    "route",
+    "primary_tool",
+    "required_documents",
+    "run_mode",
+    "production_scope",
+    "execution_mode",
+    "actions"
+  ],
+  "properties": {
+    "goal": {
+      "type": "string"
+    },
+    "intent": {
+      "type": "string",
+      "enum": [
+        "vis_handbook",
+        "logo_refinement",
+        "visual_asset_system",
+        "packaging_mockup",
+        "social_template_pack",
+        "landing_page_visual_system",
+        "ui_screen_system",
+        "open_source_vector_refinement"
+      ]
+    },
+    "route": {
+      "type": "string"
+    },
+    "primary_tool": {
+      "type": "string",
+      "enum": [
+        "figma_mcp",
+        "adobe_illustrator",
+        "adobe_photoshop",
+        "canva",
+        "stitch",
+        "pencil",
+        "inkscape"
+      ]
+    },
+    "secondary_tools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "required_documents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "optional_documents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "run_mode": {
+      "type": "string",
+      "enum": [
+        "document",
+        "production"
+      ]
+    },
+    "production_scope": {
+      "type": "string",
+      "enum": [
+        "single",
+        "full_suite"
+      ]
+    },
+    "execution_mode": {
+      "type": "string",
+      "enum": [
+        "handoff",
+        "execute"
+      ]
+    },
+    "execution_gateway_mode": {
+      "type": "string",
+      "enum": [
+        "direct",
+        "swarm",
+        "hybrid"
+      ],
+      "default": "hybrid"
+    },
+    "fallback_policy": {
+      "type": "object",
+      "properties": {
+        "figma_connector": {
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "required": [
+        "figma_connector"
+      ],
+      "additionalProperties": false
+    },
+    "executor_candidates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "selected_executor": {
+      "type": "string",
+      "default": ""
+    },
+    "dependency_inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "task_id": {
+            "type": "string"
+          },
+          "artifact_type": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "task_id",
+          "artifact_type",
+          "path"
+        ],
+        "additionalProperties": false
+      },
+      "default": []
+    },
+    "output_family_dir": {
+      "type": "string",
+      "default": ""
+    },
+    "decision_timeout_seconds": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 15
+    },
+    "fallback_trace": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "from",
+          "to",
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "default": []
+    },
+    "order_context": {
+      "type": "object",
+      "properties": {
+        "selected_deliverables": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "manual_formats": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "auto_generate_application_assets": {
+          "type": "boolean"
+        },
+        "resume_from_run_dir": {
+          "type": "string"
+        },
+        "client_constraints": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true,
+      "default": {}
+    },
+    "gateway_trace": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "gateway": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "gateway",
+          "status",
+          "reason"
+        ],
+        "additionalProperties": true
+      },
+      "default": []
+    },
+    "delivery_contract": {
+      "type": "object",
+      "properties": {
+        "package": {
+          "type": "string"
+        },
+        "required_files": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "acceptance": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true,
+      "default": {}
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "deliverables": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "tool_prompt": {
+      "type": "string"
+    },
+    "mcp": {
+      "type": "object",
+      "properties": {
+        "supported": {
+          "type": "boolean"
+        },
+        "tool_name": {
+          "type": "string"
+        },
+        "target_file": {
+          "type": "string"
+        },
+        "target_selection": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
