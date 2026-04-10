@@ -9,7 +9,7 @@ description: Route approved VIS outputs into the correct downstream design tool,
 
 This skill sits after the core VIS workflow and packaging stage. It does not redefine strategy or visual direction. Its role is to route approved brand outputs into execution-ready downstream production.
 
-Version 2.1 adds two run modes:
+Version 2.2.1 keeps dual run modes and adds Swarm-compatible gateway hardening with Open Pencil CLI adaptation for `pencil` execution paths:
 
 - `document`: stop at planning documents and payloads
 - `production`: continue into automated execution orchestration after documentation

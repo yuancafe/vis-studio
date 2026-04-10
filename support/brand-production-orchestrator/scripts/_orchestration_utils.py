@@ -51,6 +51,10 @@ EXECUTOR_APP_ALIASES = {
     "pencil": [],
 }
 
+EXECUTOR_CLI_ALIASES = {
+    "pencil": ["pencil"],
+}
+
 DESIGN_APP_CATALOG = {
     "figma": [
         "/Applications/Figma.app",
@@ -67,6 +71,21 @@ DESIGN_APP_CATALOG = {
         "/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app",
         "/Applications/Adobe Photoshop 2025/Adobe Photoshop 2025.app",
         "/Applications/Adobe Photoshop.app",
+    ],
+}
+
+DESIGN_CLI_CATALOG = {
+    "pencil": [
+        {
+            "cli_id": "open-pencil",
+            "probe_command": ["open-pencil", "--help"],
+            "execute_command": ["open-pencil", "eval"],
+        },
+        {
+            "cli_id": "open-pencil-bun",
+            "probe_command": ["bun", "open-pencil", "--help"],
+            "execute_command": ["bun", "open-pencil", "eval"],
+        },
     ],
 }
 
@@ -352,6 +371,56 @@ def detect_installed_design_apps() -> dict[str, dict[str, Any]]:
     return apps
 
 
+def _probe_cli_command(command: list[str], timeout: int = 20) -> tuple[bool, int, str, str]:
+    try:
+        proc = subprocess.run(
+            command,
+            capture_output=True,
+            text=True,
+            check=False,
+            timeout=timeout,
+        )
+    except FileNotFoundError:
+        return False, 127, "", "command-not-found"
+    except subprocess.TimeoutExpired:
+        return False, 124, "", "probe-timeout"
+    except Exception as exc:  # defensive: probe should never crash discovery
+        return False, 1, "", f"probe-error:{exc}"
+    return proc.returncode == 0, proc.returncode, proc.stdout or "", proc.stderr or ""
+
+
+def detect_installed_design_clis() -> dict[str, dict[str, Any]]:
+    installed: dict[str, dict[str, Any]] = {}
+    for cli_family, probes in DESIGN_CLI_CATALOG.items():
+        hits: list[dict[str, Any]] = []
+        for probe in probes:
+            probe_command = [str(item) for item in probe.get("probe_command", []) if str(item).strip()]
+            if not probe_command:
+                continue
+            ok, return_code, stdout, stderr = _probe_cli_command(probe_command)
+            if not ok:
+                continue
+            binary_name = probe_command[0]
+            resolved_path = shutil.which(binary_name) or ""
+            hits.append(
+                {
+                    "cli_id": str(probe.get("cli_id", cli_family)),
+                    "probe_command": probe_command,
+                    "execute_command": [str(item) for item in probe.get("execute_command", []) if str(item).strip()],
+                    "path": resolved_path,
+                    "return_code": return_code,
+                    "stdout_preview": (stdout or "")[:240],
+                    "stderr_preview": (stderr or "")[:240],
+                }
+            )
+        installed[cli_family] = {
+            "cli_family": cli_family,
+            "available": bool(hits),
+            "hits": hits,
+        }
+    return installed
+
+
 def _run_mcporter_list() -> dict[str, Any]:
     if not shutil.which("mcporter"):
         return {
@@ -412,6 +481,7 @@ def discover_design_services(
     global_mcp = load_global_mcp_config(global_mcp_config_path)
     plugin_flags = _extract_plugins(codex_config)
     app_catalog = detect_installed_design_apps()
+    cli_catalog = detect_installed_design_clis()
     mcporter_state = _run_mcporter_list()
     swarm_detected = any("swarm" in item.lower() for item in mcporter_state.get("servers", []))
 
@@ -480,10 +550,18 @@ def discover_design_services(
 
         app_targets = EXECUTOR_APP_ALIASES.get(executor, [])
         app_hits = [app_catalog[item] for item in app_targets if app_catalog.get(item, {}).get("installed")]
+        cli_targets = EXECUTOR_CLI_ALIASES.get(executor, [])
+        cli_hits: list[dict[str, Any]] = []
+        for cli_target in cli_targets:
+            cli_entry = cli_catalog.get(cli_target, {})
+            if cli_entry.get("available"):
+                for hit in cli_entry.get("hits", []):
+                    if isinstance(hit, dict):
+                        cli_hits.append(hit)
 
         direct_available = any(match.get("available") for match in matches)
         swarm_available = bool(swarm_detected and mcporter_state.get("available"))
-        app_cli_available = bool(app_hits)
+        app_cli_available = bool(app_hits or cli_hits)
         plugin_available = bool(plugin_ok)
 
         available = direct_available or swarm_available or app_cli_available or plugin_available
@@ -503,6 +581,8 @@ def discover_design_services(
             if direct_available
             else "swarm-detected"
             if swarm_available
+            else "cli-installed"
+            if cli_hits
             else "app-installed"
             if app_cli_available
             else f"plugin-enabled:{plugin_id}"
@@ -522,6 +602,7 @@ def discover_design_services(
             "plugin_available": plugin_available,
             "matched_servers": matches,
             "app_cli_hits": app_hits,
+            "cli_hits": cli_hits,
             "capabilities": EXECUTOR_CAPABILITIES.get(executor, _guess_capabilities_from_name(executor)),
         }
 
@@ -565,6 +646,13 @@ def discover_design_services(
             snippet = "[mcp_servers.stitch]\nurl = \"https://stitch.googleapis.com/mcp\""
         elif first == "canva":
             snippet = "Enable Canva connector/plugin in Codex plugins."
+        elif first == "pencil":
+            snippet = (
+                "Install Open Pencil CLI and ensure `open-pencil` is available in PATH.\n"
+                "Example:\n"
+                "git clone git@github.com:open-pencil/open-pencil.git\n"
+                "cd open-pencil && <install steps> && open-pencil --help"
+            )
         suggestions.append(
             {
                 "intent": item["intent"],
@@ -587,6 +675,7 @@ def discover_design_services(
         },
         "plugin_flags": plugin_flags,
         "installed_apps": app_catalog,
+        "installed_clis": cli_catalog,
         "design_servers": sorted(server_records.values(), key=lambda x: (x["source"], x["server_id"])),
         "route_executor_matrix": route_executor_matrix,
         "missing_critical": missing_critical,
